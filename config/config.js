@@ -11,12 +11,20 @@ CONFIG.port = process.env.PORT || '4000';
 // CONFIG.db_name = process.env.DB_NAME || 'myapp';
 // CONFIG.db_user = process.env.DB_USER || 'root';
 // CONFIG.db_password = process.env.DB_PASSWORD || 'Password1234';
-CONFIG.db_dialect = 'postgres';
-CONFIG.db_host = '122.165.63.12';
-CONFIG.db_port = '5432';
-CONFIG.db_name = 'zenbasket';
-CONFIG.db_user = 'local';
-CONFIG.db_password = 'local';
+// CONFIG.db_dialect = 'postgres';
+// CONFIG.db_host = '122.165.63.12';
+// CONFIG.db_port = '5432';
+// CONFIG.db_name = 'zenbasket';
+// CONFIG.db_user = 'local';
+// CONFIG.db_password = 'local';
+
+CONFIG.db_dialect = process.env.DB_DIALECT || 'postgres';
+CONFIG.db_host = process.env.DB_HOST || '122.165.63.12';
+CONFIG.db_port = process.env.DB_PORT || '5432';
+CONFIG.db_name = process.env.DB_NAME || 'zenbasket';
+CONFIG.db_user = process.env.DB_USER || 'local';
+CONFIG.db_password = process.env.DB_PASSWORD || 'local';
+
 
 CONFIG.max_pool_conn = process.env.MAX_POOL_CONN || '50';
 CONFIG.min_pool_conn = process.env.MIN_POOL_CONN || '0';
